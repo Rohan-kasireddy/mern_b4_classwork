@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Forms Example</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <form>
+        <input type="text" placeholder="Email"><br>
+        <input type="text" placeholder="Username"><br>  
+        <input type="First Name" placeholder="First Name"><br>
+        <input type="Last Name" placeholder="Last Name"><br>
+        <input type="text" placeholder="Password"><br>
+        <p id="error-msg"></p>
+        <input type="checkbox"> Email me with news and updates<br>
+        <p>By signing up you agree to our <a href="https://www.w3schools.com/about/about_copyright.asp">Terms of service</a>and<a href="https://www.w3schools.com/about/about_privacy.asp">Privacy Policy</a></p>
+        <input type="button" value="Create account" onclick="ShowError()" ><br>
+        </form>
+        <script>
+            // Event Handlers code
+            function ShowError() {
+                //1.get response element and save it
+                var errorPara =document.getElementById("error-msg");
+                //2. send the response text to the response element
+                console.log(errorPara);
+                errorPara.innerHTML = "<strong color="red" >fields cannot be empty</strong>";
+            }
+        </script>
+    </body>
+
+</html>
